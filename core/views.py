@@ -4,4 +4,4 @@ def home(request):
     return render(request,"core/home.html")
 
 def gallery(request):
-    return render(request,"core/gallery.html")
+    return render(request,"core/gallery.html") 
