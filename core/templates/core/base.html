@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Saira', sans-serif;
+        }
+
+        .navbar-brand {
+            font-family: 'Michroma', sans-serif;
+        }
+
+        body {
+            background-color: rgb(26, 28, 32);
+        }
+
+        .carousel-item {
+            height: 500px;
+        }
+
+        .carousel-item img,
+        .carousel-item svg {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-item::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            /* solo cubre la parte de abajo */
+            background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+            z-index: 1;
+        }
+
+        .carousel-caption {
+            z-index: 2;
+            /* asegura que el texto quede encima */
+        }
+
+        .row {
+            margin-top: 70px;
+        }
+
+        footer {
+            background-color: rgb(36, 36, 48);
+            margin-top: 50px;
+        }
+
+        .footerContainer {
+            width: 100%;
+            padding: 70px 30px 20px;
+        }
+
+        .socialIcons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .socialIcons a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .socialIcons a i {
+            font-size: 2em;
+            color: black;
+            opacity: 0.9;
+        }
+
+        .socialIcons a:hover {
+            background-color: #111;
+            transition: 0.5s;
+        }
+
+        .footerNav {
+            margin: 30px 0;
+        }
+
+        .footerNav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        .footerNav ul li a {
+            color: white;
+            margin: 20px;
+            text-decoration: none;
+            font-size: 1.3em;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+
+        .footerNav ul li a:hover {
+            opacity: 1;
+        }
+
+        .footerBottom {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footerBottom p {
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            .footerNav ul {
+                flex-direction: column;
+            }
+
+            .footerNav ul li {
+                width: 100%;
+                text-align: center;
+                margin: 8px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ExpoGame</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Preguntas frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Quienes Somos</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Undertale
+    <div class="anuncioundertale">
+        <a href="https://undertale.com/">
+            <img src="https://preview.redd.it/a-title-banner-i-made-in-photoshop-v0-jwjoz0ier2fa1.jpg?width=1080&crop=smart&auto=webp&s=67000bc53b78dfa0583cd33b903dd14f80a470f2"
+                alt="anuncio" height="150">
+        </a>
+    </div> -->
+
+    <div class="container-fluid mt-3">
+        <div class="row">
+
+            <!-- hollow izquierda -->
+            <div class="col-2 d-flex flex-column justify-content-between">
+                <a href="https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/?l=spanish">
+                    <img src="https://i.pinimg.com/736x/3e/e6/48/3ee648c1534775f672398d73bcfbf263.jpg"
+                        alt="anuncio Hollow" class="img-fluid">
+                </a>
+                <a href="https://www.youtube.com/watch?v=VQRLujxTm3c">
+                    <img src="https://einvestidor.estadao.com.br/wp-content/uploads/2025/05/web6-capa_080520251812.jpg-scaled.webp"
+                        alt="anuncio Hollow" class="img-fluid">
+                </a>
+            </div>
+
+
+            <!-- Contenido central -->
+            <div class="col-8 text-center text-white">
+
+                {% block content %}{% endblock %}
+
+            </div>
+
+            <!-- CODM derecha -->
+            <div class="col-2 d-flex flex-column justify-content-between align-items-end">
+                <div class="anuncioArriba">
+                    <a href="https://www.callofduty.com/es/mobile">
+                        <img src="https://wallpapersok.com/images/high/character-banner-with-call-of-duty-mobile-logo-vn1au84cw9rjn4iz.webp"
+                            alt="anuncio CODM" class="img-fluid">
+                    </a>
+                </div>
+                <div class="anuncioAbajo">
+                    <a href="https://playvalorant.com/es-mx/">
+                        <img src="https://store-images.s-microsoft.com/image/apps.21507.13663857844271189.4c1de202-3961-4c40-a0aa-7f4f1388775a.20ed7782-0eda-4f9d-b421-4cc47492edc6"
+                            alt="anuncio CODM" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Quienes somos</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;2025; Designed by <span class="designer">Katherine</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
