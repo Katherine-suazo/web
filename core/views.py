@@ -8,3 +8,6 @@ def gallery(request):
 
 def novedades(request):
     return render(request,"core/novedades.html")
+
+def quienes_somos(request):
+    return render(request, "core/qsomos.html")
