@@ -6,8 +6,8 @@ def home(request):
 def gallery(request):
     return render(request,"core/gallery.html") 
 
-def novedades(request):
-    return render(request,"core/novedades.html")
+# def novedades(request):
+#     return render(request,"core/novedades.html")
 
 def quienes_somos(request):
     return render(request, "core/qsomos.html")
