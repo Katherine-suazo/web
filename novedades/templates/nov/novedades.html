@@ -11,25 +11,6 @@
     </div>
 </div>
 
-<hr>
-
-    {% for n in novedad %}
-
-    <img src="{{ n.imagen.url  }}" alt="">
-
-    <p> {{ n.titulo  }} </p>
-    <p> {{ n.descripcion  }}   </p>
-
-    <hr>
-
-    {% endfor %}
-
-<!-- <div class="position-relative abajo">
-    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-        <h1 class="display-4 fw-bold">Novedades</h1>
-    </div>
-</div>
-
 
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -94,11 +75,39 @@
     </button>
 </div>
 
+<!-- ------------------- -->
+
 
 <div class="container my-4">
     <div class="row g-4">
 
-        <div class="col-md-4">
+        {% for n in novedad %}
+
+        <div class="col-md-6">
+            <div class="card h-100">
+
+                <img src="{{ n.imagen.url }}" alt="" class="card-img-top">
+                
+                <div class="card-body">
+                    <h3>{{ n.titulo }}</h3>
+                    <p class="card-text">{{ n.descripcion }}</p>
+                </div>
+
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+
+
+<!-- ------------------- -->
+
+<!-- <div class="container my-9">
+    <div class="row g-4">
+
+        <div class="col-md-9">
             <div class="card h-100">
                 <a
                     href="https://as.com/meristation/noticias/god-of-war-ya-estaria-trabajando-en-un-juego-principal-de-la-saga-aunque-tiene-otra-sorpresa-para-los-fans-de-silksong-n/">
@@ -141,9 +150,11 @@
         </div>
 
     </div>
-</div>
+</div> -->
 
-<div class="container my-4">
+<!-- ------------------- -->
+
+<!-- <div class="container my-4">
     <div class="row g-4">
 
         <div class="col-md-4">
@@ -190,5 +201,7 @@
 
     </div>
 </div> -->
+
+<!-- ------------------- -->
 
 {% endblock %}
