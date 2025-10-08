@@ -5,11 +5,15 @@
 
 {% block content %}
 
+
 <div class="position-relative abajo">
     <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
         <h1 class="display-4 fw-bold">Novedades</h1>
     </div>
 </div>
+
+
+<!-- ------------------- -->
 
 
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
@@ -75,7 +79,7 @@
     </button>
 </div>
 
-<!-- ------------------- -->
+<!-- ---------- CARD CONTENIDO --------- -->
 
 
 <div class="container my-4">
@@ -101,107 +105,35 @@
     </div>
 </div>
 
+<!-- ---------- PAGINACION --------- -->
 
-<!-- ------------------- -->
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-center">
 
-<!-- <div class="container my-9">
-    <div class="row g-4">
+    {% if novedad.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ novedad.previous_page_number }}" aria-label="Previous">
+          &laquo; Anterior
+        </a>
+      </li>
+    {% endif %}
 
-        <div class="col-md-9">
-            <div class="card h-100">
-                <a
-                    href="https://as.com/meristation/noticias/god-of-war-ya-estaria-trabajando-en-un-juego-principal-de-la-saga-aunque-tiene-otra-sorpresa-para-los-fans-de-silksong-n/">
-                    <img src="https://img.asmedia.epimg.net/resizer/v2/SGVIFXHX4NFCNGJX4NOLI7BPDY.jpg?auth=8d57ec94cf96aaf3432b0a18d245d97440e62f4f5db62b78f3746ce3d43a72c6&width=1288&height=725&smart=true"
-                        class="card-img-top" alt="warsilk">
-                </a>
-                <div class="card-body">
-                    <p class="card-text">God of War ya estaría trabajando en un juego principal de la saga, aunque tiene
-                        otra sorpresa para los fans de Silksong.</p>
-                </div>
-            </div>
-        </div>
+    <li class="page-item disabled">
+      <span class="page-link">
+        Página {{ novedad.number }} de {{ novedad.paginator.num_pages }}
+      </span>
+    </li>
 
-        <div class="col-md-4">
-            <div class="card h-100">
-                <a
-                    href="https://mundogames.com/04/09/2025/noticias/hell-is-us-llega-a-pc-ps5-y-xbox-series-x-s-con-localizacion-regional/">
-                    <img src="https://cdn1.epicgames.com/spt-assets/340b7dcf4fc94b289d8958815593acb9/hell-is-us-h7dxz.jpg"
-                        class="card-img-top" alt="warsilk">
-                </a>
-                <div class="card-body">
-                    <p class="card-text">Hell is Us, se estrena este 4 de septiembre en Latinoamérica, disponible en PC,
-                        PlayStation 5 y Xbox Series X/S.</p>
-                </div>
-            </div>
-        </div>
+    {% if novedad.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ novedad.next_page_number }}" aria-label="Next">
+          Siguiente &raquo;
+        </a>
+      </li>
+    {% endif %}
 
-        <div class="col-md-4">
-            <div class="card h-100">
-                <a
-                    href="https://www.3djuegos.com/juegos/genshin-impact/noticias/hace-cuatro-meses-casi-desinstalo-genshin-impact-ahora-he-podido-jugar-su-nueva-expansion-nod-krai-creo-que-hoyoverse-se-merece-oportunidad">
-                    <img src="https://fastcdn.hoyoverse.com/content-v2/plat/123439/c39dd0699f78411122c6c9797d57a592_7063500647883927830.jpeg"
-                        class="card-img-top" alt="warsilk">
-                </a>
-                <div class="card-body">
-                    <p class="card-text">Después de retrasar durante un año el Acto 6 del Capítulo de Teyvat, los
-                        creadores de Genshin Impact intentan reivindicarse.</p>
-                </div>
-            </div>
-        </div>
+  </ul>
+</nav>
 
-    </div>
-</div> -->
-
-<!-- ------------------- -->
-
-<!-- <div class="container my-4">
-    <div class="row g-4">
-
-        <div class="col-md-4">
-            <div class="card h-100">
-                <a
-                    href="https://los40.cl/2025/09/06/la-serie-live-action-del-videojuego-life-is-strange-tiene-luz-verde-que-se-sabe-del-proyecto/">
-                    <img src="https://store-images.s-microsoft.com/image/apps.21284.13858225632802857.a1c4ff2d-9f01-470e-8ad5-56304cf6acd9.9ec5382f-b1d4-44f0-b298-0dbdac280605?q=90&w=480&h=270"
-                        class="card-img-top" alt="warsilk">
-                </a>
-                <div class="card-body">
-                    <p class="card-text">La serie live-action del videojuego Life Is Strange tiene luz verde: ¿Qué se
-                        sabe del proyecto?</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card h-100">
-                <a
-                    href="https://as.com/meristation/noticias/pokemon-anuncia-un-nuevo-tamagotchi-oficial-con-mas-de-150-criaturas-distintas-todo-un-sueno-hecho-realidad-n/">
-                    <img src="https://cdn.essential-japan.com/wp-content/uploads/2025/08/Pokemon-Poke-nade-Monster-Ball-0.webp"
-                        class="card-img-top" alt="warsilk">
-                </a>
-                <div class="card-body">
-                    <p class="card-text">Pokémon anuncia un nuevo ‘Tamagotchi’ oficial con más de 150 criaturas
-                        distintas: todo un sueño hecho realidad</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card h-100">
-                <a
-                    href="https://vandal.elespanol.com/random/call-of-duty-rechazo-a-steven-spielberg-y-se-confirma-el-mayor-miedo-de-activision-queria-el-control-total/36646.html">
-                    <img src="https://www.masgamers.com/wp-content/uploads/2022/11/modern-warfare-ghost.jpg"
-                        class="card-img-top" alt="warsilk">
-                </a>
-                <div class="card-body">
-                    <p class="card-text">Call of Duty rechazó a Steven Spielberg y se confirma el mayor miedo de
-                        Activision: 'Quería el control total'</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div> -->
-
-<!-- ------------------- -->
 
 {% endblock %}
