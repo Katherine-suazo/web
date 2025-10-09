@@ -18,7 +18,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-if settings.DEBUG:
+if settings.DEBUG: #
     from django.conf.urls.static import static
-    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) # para que las imagenes se vean en el navegador en modo debug
 
